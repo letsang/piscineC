@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jtsang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/12 14:07:49 by jtsang            #+#    #+#             */
+/*   Updated: 2019/09/12 14:30:59 by jtsang           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_boolean.h"
+
+void ft_putstr(char *str)
+{
+	while (*str)
+		write(1, str++, 1);
+}
+t_bool ft_is_even(int nbr)
+{
+	return ((EVEN(nbr)) ? TRUE : FALSE);
+}
+int main(int argc, char **argv)
+{
+	(void)argv;
+	if (ft_is_even(argc - 1) == TRUE)
+		ft_putstr(EVEN_MSG);
+	else
+		ft_putstr(ODD_MSG);
+	return (SUCCESS);
+}
